@@ -1,16 +1,21 @@
 import { Welcome } from './components/Welcome.js';
-import {Tarjeta, BlogPost} from'./tarea/Tarea1.js'
+import {Tarjeta, BlogPost} from'./tarea/Tarea1.js';
+import {MatchNombre} from'./tarea/Tarea2.js';
+
+
+
+ReactDOM.render(<MatchNombre nombre="Jose"  />, document.getElementById('react-app'));
 
 // ReactDOM.render(<Welcome nombre="Julián" />, document.getElementById('react-app'));
 // ReactDOM.render(<Tarjeta nombre="Jose Basualdo" titulo="FullStack Developer" imagen="https://avatars.githubusercontent.com/u/68978572?v=4" />, document.getElementById('react-app'));
-ReactDOM.render(<BlogPost titulo="Ardillas!!" parrafos={`Hoy vi una ardilla.\n
-La ardilla era negra, era más grande que otras ardillas, tenía muchos dientes grandes y encima andaba siempre en cuatro patas, moviendo la cola.
-Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.`} autor={{
-    nombre: "José Basualdo",
-    titulo: "FullStack Developer",
-    imagen: "https://avatars.githubusercontent.com/u/68978572?v=4"
-  }
-} />, document.getElementById('react-app'));
+// ReactDOM.render(<BlogPost titulo="Ardillas!!" parrafos={`Hoy vi una ardilla.\n
+// La ardilla era negra, era más grande que otras ardillas, tenía muchos dientes grandes y encima andaba siempre en cuatro patas, moviendo la cola.
+// Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.`} autor={{
+//     nombre: "José Basualdo",
+//     titulo: "FullStack Developer",
+//     imagen: "https://avatars.githubusercontent.com/u/68978572?v=4"
+//   }
+// } />, document.getElementById('react-app'));
 
 // import { Button } from './components/Button.js';
 
