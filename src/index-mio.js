@@ -1,10 +1,10 @@
 import { Welcome } from './components/Welcome.js';
 import {Tarjeta, BlogPost} from'./tarea/Tarea1.js';
-import {MatchNombre} from'./tarea/Tarea2.js';
+import {MatchNombre, PasswordInput} from'./tarea/Tarea2.js';
 
 
 
-ReactDOM.render(<MatchNombre nombre="Jose"  />, document.getElementById('react-app'));
+ReactDOM.render(<PasswordInput minLength="6"  />, document.getElementById('react-app'));
 
 // ReactDOM.render(<Welcome nombre="Julián" />, document.getElementById('react-app'));
 // ReactDOM.render(<Tarjeta nombre="Jose Basualdo" titulo="FullStack Developer" imagen="https://avatars.githubusercontent.com/u/68978572?v=4" />, document.getElementById('react-app'));

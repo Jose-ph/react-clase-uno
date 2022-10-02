@@ -44,7 +44,26 @@ export function MatchNombre(props) {
  * Si hicieron todo bien, el input se pondrá rojo si no pasaron el tamaño mínimo de la contraseña.
  */
 
-export function PasswordInput(props) {}
+export function PasswordInput(props) {
+
+    const [value, setValue] = React.useState("")
+
+    console.log(value)
+    console.log(props.minLength)
+
+  
+
+    return(
+          value.length < props.minLength ?  <input className="input-match" type = "password" onChange={(e)=>setValue(e.target.value)} ></input> :
+          
+          <input className="input" type = "password" onChange={(e)=>setValue(e.target.value)}></input>
+
+       
+           
+     )
+
+
+}
 
 /*
  * Estos componentes están bastante buenos, pero estamos repitiendo mucho código,
