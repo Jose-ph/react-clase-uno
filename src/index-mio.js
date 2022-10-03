@@ -2,12 +2,23 @@ import { Welcome } from './components/Welcome.js';
 import {Tarjeta, BlogPost} from'./tarea/Tarea1.js';
 import {MatchNombre, PasswordInput, ValidationInput} from'./tarea/Tarea2.js';
 import {UncontrolledCheckbox, CheckboxList} from './tarea/Tarea3.js';
+import {ControlledCheckbox, CheckboxListWithState } from './tarea/Tarea4.js';
+ 
 
-ReactDOM.render(<CheckboxList items={{
-       uno: false,
-       dos: true,
-       tres: false,
-     }}  />, document.getElementById('react-app'));
+
+ReactDOM.render(<CheckboxListWithState items={{
+     uno: false,
+     dos: true,
+     tres: false}}  />, document.getElementById('react-app'));
+
+//  ReactDOM.render(<ControlledCheckbox name={"check uno"} value={true} onChange={(e)=>console.log(e.target)}  />, document.getElementById('react-app'));
+
+
+// ReactDOM.render(<CheckboxList items={{
+//        uno: false,
+//        dos: true,
+//        tres: false,
+//      }}  />, document.getElementById('react-app'));
 
 // ReactDOM.render(<UncontrolledCheckbox name="Acepto términos y condiciones" initialValue={true}  />, document.getElementById('react-app'));
 
