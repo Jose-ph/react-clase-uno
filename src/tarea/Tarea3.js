@@ -11,7 +11,7 @@
 
 export function UncontrolledCheckbox(props) {
     const [checked, setChecked] = React.useState(props.initialValue);
-    console.log(checked)
+  
 
     return (
         <>  
@@ -35,4 +35,13 @@ export function UncontrolledCheckbox(props) {
  * debe renderizar tres checkboxes, con nombres "uno", "dos" y "tres", que inicien con valores false, true y false respectivamente.
  */
 
-export function CheckboxList(props) {}
+export function CheckboxList(props) {
+    let items = props.items
+    return (
+      <div>
+        {Object.keys(items).map((key) => (
+          <UncontrolledCheckbox key={key} initialValue={items[key]} name={key} />
+        ))}
+      </div>
+    );
+  }
