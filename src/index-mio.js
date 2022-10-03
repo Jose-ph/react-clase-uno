@@ -1,10 +1,12 @@
 import { Welcome } from './components/Welcome.js';
 import {Tarjeta, BlogPost} from'./tarea/Tarea1.js';
 import {MatchNombre, PasswordInput, ValidationInput} from'./tarea/Tarea2.js';
+import {UncontrolledCheckbox} from './tarea/Tarea3.js';
 
 
+ReactDOM.render(<UncontrolledCheckbox name="Acepto términos y condiciones" initialValue={true}  />, document.getElementById('react-app'));
 
-ReactDOM.render(<ValidationInput validation= {(value) => value.length >= 8}  />, document.getElementById('react-app'));
+// ReactDOM.render(<ValidationInput validation= {(value) => value.length >= 8}  />, document.getElementById('react-app'));
 
 // ReactDOM.render(<Welcome nombre="Julián" />, document.getElementById('react-app'));
 // ReactDOM.render(<Tarjeta nombre="Jose Basualdo" titulo="FullStack Developer" imagen="https://avatars.githubusercontent.com/u/68978572?v=4" />, document.getElementById('react-app'));
