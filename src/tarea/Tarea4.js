@@ -45,14 +45,15 @@ export function CheckboxListWithState(props) {
 
     <div>
       
-      {Object.keys(props.items).map(key=>(
+      {Object.keys(checkboxesState).map(key=>(
         <ControlledCheckbox 
         key={key}
         name={key}
-        value={props.items[key]}
+        value={checkboxesState[key]}
         onChange={()=>{
          
-          setCheckboxesState({...checkboxesState,[key]:!props.items[key]})
+          setCheckboxesState({...checkboxesState,[key]:!checkboxesState[key]})
+          
         }}
         
         />
