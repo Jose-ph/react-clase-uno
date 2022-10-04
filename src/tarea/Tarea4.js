@@ -9,9 +9,11 @@
 export function ControlledCheckbox(props) {
 
     return(
-        <label>  <input type="checkbox" checked ={props.value} onChange={props.onChange} ></input> {props.name}      </label>
-       
-
+      <div>   
+        <label>   {props.name}      </label>
+        <input type="checkbox" checked ={props.value} onChange={props.onChange} ></input>
+      
+        </div>
     )
 }
 
@@ -37,16 +39,31 @@ export function ControlledCheckbox(props) {
  */
 
 export function CheckboxListWithState(props) {
+  const [checkboxesState,setCheckboxesState]= React.useState(props.items)
 
-        const [state, setState] = React.useState(props.items);
+  return (
 
-        return (
-            <div>
-              {Object.keys(props.items).map((key) => (
-                <ControlledCheckbox key={key}  name={key} value={props.items[key]} onChange={(state)=>setState({...state,state})}    />
-              ))}
-            </div>
-          );
+    <div>
+      
+      {Object.keys(props.items).map(key=>(
+        <ControlledCheckbox 
+        key={key}
+        name={key}
+        value={props.items[key]}
+        onChange={()=>{
+         
+          setCheckboxesState({...checkboxesState,[key]:!props.items[key]})
+        }}
+        
+        />
+      ))      }
+
+    </div>
+
+
+  )
+
+    
 }
 
 
